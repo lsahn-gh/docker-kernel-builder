@@ -18,7 +18,7 @@ $ docker build --tag kernel kernel-v2.6/
 ```
 $ docker run -i -t --network host --name kern2.6 -v /path/to/kernel/source:/root/mpoint kernel /bin/bash
 ```
-``/path/to/kernel/source`` must be a path where you have kernel source. The image does not include kernel source. Because it is huge.
+``/path/to/kernel/source`` must be a path pointed to host folder where you have kernel source. Because the image does not include kernel source.
 
 If you distro causes an error of SELinux during the command, add ``:Z`` flag in the end of ``-v`` like ``-v /path/to/kernel/source:/root/mpoint:Z``.
 
